@@ -6,10 +6,14 @@ import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatMessage;
 import com.theokanning.openai.completion.chat.ChatMessageRole;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import br.com.open.ai.cecg.OpenAI.component.ChatStreamComponent;
 import br.com.open.ai.cecg.OpenAI.http.data.request.ScienceFictionRequestDTO;
 import br.com.open.ai.cecg.OpenAI.service.CallOpenAiService;
 
+@Service
 public record CallOpenAiServiceImpl(ChatStreamComponent streamComponent) implements CallOpenAiService {
 
     public static final String SCIENCE_FICTION_PROMPT_MESSAGE =
